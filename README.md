@@ -54,7 +54,7 @@ Checkout:                Multi-step process including shipping details,Billing I
 
 
 //Admin Panel Features
-
+ to access to admin panel using this link or address     http://localhost:3001/admin
 
 Add Products:            Admins can add new products with name, price, image URL, and description.
 Delete Products:         Products can be deleted from the product listing.
