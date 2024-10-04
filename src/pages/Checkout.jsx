@@ -40,18 +40,18 @@ const Checkout = ({ setOrder }) => {
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24 pt-36 ">
       <h3 className="text-2xl font-semibold mb-4">CHECKOUT</h3>
       <div className="flex flex-col md:flex-row justify-between sm:space-x-10 mt-8">
-
-
         {/* checkout page  */}
 
-          {/* billing information  */}
+        {/* billing information  */}
         <div className="md:w-2/3">
           <div className="border p-2 mb-6">
             <div
               className="flex items-center justify-between"
               onClick={() => setBillingToggle(!billingToggle)}
             >
-              <h3 className="text-lg font-semibold mb-2">Billing Information</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                Billing Information
+              </h3>
               {billingToggle ? <FaAngleDown /> : <FaAngleUp />}
             </div>
 
@@ -92,7 +92,9 @@ const Checkout = ({ setOrder }) => {
               className="flex items-center justify-between"
               onClick={() => setShippingToggle(!shippingToggle)}
             >
-              <h3 className="text-lg font-semibold mb-2">Shipping information</h3>
+              <h3 className="text-lg font-semibold mb-2">
+                Shipping information
+              </h3>
               {shippingToggle ? <FaAngleDown /> : <FaAngleUp />}
             </div>
 
@@ -105,7 +107,10 @@ const Checkout = ({ setOrder }) => {
                   placeholder="Enter your Address"
                   className="border px-3 py-2  w-full"
                   onChange={(e) =>
-                    setShippingInfo({ ...shippingInfo, address: e.target.value })
+                    setShippingInfo({
+                      ...shippingInfo,
+                      address: e.target.value,
+                    })
                   }
                 />
               </div>
@@ -172,8 +177,56 @@ const Checkout = ({ setOrder }) => {
               </div>
               {paymentMethod === "dc" && (
                 <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <h3 className="text-xl font-semibold mb-4">Debit Card Information</h3>
-                  {/* Debit Card Form */}
+                  <h3 className="text-xl font-semibold mb-4">
+                    Debit Card Information
+                  </h3>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 font-semibold mb-2">
+                      Card Number
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter Card Number"
+                      className="border p-2 w-full rounded"
+                      required
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-gray-700 font-semibold mb-2">
+                      Card Holder Name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter Card Holder Name"
+                      className="border p-2 w-full rounded"
+                      required
+                    />
+                  </div>
+                  {/* Section 2 */}
+                  <div className="flex justify-between mb-4">
+                    <div className="w-1/2 mr-2">
+                      <label className="block text-gray-700 font-semibold mb-2">
+                        Expire Date
+                      </label>
+                      <input
+                        type="date"
+                        placeholder="Enter Expire Date"
+                        className="border p-2 w-full rounded"
+                        required
+                      />
+                    </div>
+                    <div className="w-1/2 ml-2">
+                      <label className="block text-gray-700 font-semibold mb-2">
+                        CVV
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Enter CVV Number"
+                        className="border p-2 w-full rounded"
+                        required
+                      />
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -242,4 +295,3 @@ const Checkout = ({ setOrder }) => {
 };
 
 export default Checkout;
-

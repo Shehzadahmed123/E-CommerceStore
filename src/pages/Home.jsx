@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="bg-slate-100 mt-2 pt-36 px-4 md:px-16 lg:px-24 py-4">
+      <div className="bg-slate-50 mt-2 pt-36 px-4 md:px-16 lg:px-24 py-4">
         <div className="container mx-auto  flex flex-col md:flex-row space-x-2">
           {/* Image section */}
           <div className="w-full md:w-full mt-8 md:mt-0 h-96 relative">
