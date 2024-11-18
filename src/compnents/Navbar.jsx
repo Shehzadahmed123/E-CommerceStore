@@ -59,7 +59,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-yellow-800 text-white shadow-md fixed top-0 w-full z-50">
+      <nav className="bg-gray-800 text-white shadow-md fixed top-0 w-full z-50">
         <div className="container mx-auto px-4 md:px-16 lg:px-24 pt-5 flex justify-between">
           <div className="sm:text-xl text-lg font-bold py-1">
             <Link to="/">E-STORE</Link>
